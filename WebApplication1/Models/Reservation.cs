@@ -13,7 +13,6 @@ namespace WebApplication1.Models
         public TimeOnly EndTime { get; set; }
         public string Status { get; set; } = "planned";
 
-        // Custom validation for EndTime > StartTime
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             if (EndTime <= StartTime)
